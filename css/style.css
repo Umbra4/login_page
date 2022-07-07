@@ -15,7 +15,7 @@
     --azul4: #0080bf;
 }
 .bg-img{
-    background-image:url("../image/ace.jpg");
+    background-image:url("/image/ace.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
