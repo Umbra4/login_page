@@ -12,14 +12,14 @@
     --verde: #167c12;
 }
 body.dark{
-   background-image: url('/image/luffy_zoro.jpg'); 
+   background-image: url('../image/luffy_zoro.jpg'); 
    height: 100vh;
    background-size: cover;
    background-position: center;
    transition: background-image 0.5s linear;
 }
 .bg-img{
-    background-image:url("/image/ace.jpg");
+    background-image:url("../image/ace.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
