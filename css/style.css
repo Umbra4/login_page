@@ -9,16 +9,21 @@
     --laranja2: #ff5a00;
     --laranja3: #ff9a00;
     --laranja4: #ffce00;
-    --azul: #4ABFD9;
-    --azul2: #7ce8ff;
-    --azul3: #55d0ff;
-    --azul4: #0080bf;
+    --verde: #167c12;
+}
+body.dark{
+   background-image: url('/image/luffy_zoro.jpg'); 
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   transition: background-image 0.5s linear;
 }
 .bg-img{
-    background-image:url("../image/ace.jpg");
+    background-image:url("/image/ace.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s linear;
 }
 .bg-img::after{
     position: absolute;
@@ -44,7 +49,6 @@
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.203);
 }
 .content header{
-    color: white;
     font-size: 33px;
     font-weight: 600;
     margin: 0 0 35px 0;
@@ -67,16 +71,15 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 5s ease-in-out infinite;
+  animation: textclip 8s ease infinite;
   display: inline-block;
-      font-size: 190px;
+    font-size: 190px;
 }
 @keyframes textclip{
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-
 .field{
     position: relative;
     height: 45px;
@@ -152,4 +155,49 @@ i span{
     letter-spacing: 1px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.label{
+    cursor: pointer;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+}
+.checkbox:checked + .label{
+    background-color: var(--verde);
+}
+.ball{
+    position: absolute;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
 }
